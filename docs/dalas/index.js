@@ -1,59 +1,33 @@
 $(document).ready(function() {
 
+  // do not send form to server
   $('#form-1').submit(function (e) {
       e.preventDefault();
-      // window.history.back();
   });
   
-  $("button#button-new-1").click(function() {
-    generate();
-  });
-
   $("button#button-results-1").click(function() {
     showResult();
   });
   
-  generate();
+  $("#text1").val("1");
+  $("#text2").val("3");
 });
 
 
-function generate() {
-  hideResult();
+function calculateResult() {
 
-  var x = getRandomNumber(1, 10);
-  var y = getRandomNumber(1, 10);
+  var value1 = $("#text1").val();
+  var value2 = $("#text2").val();
 
-  $("#text1").val(getRandomEquition(x, y));
-  $("#text2").val(getRandomEquition(x, y));
-
-  var result = String.format("x = {0}, y = {1}", x, y);
+  var result = String.format("{0}", value1 / value2);
   $("#result-1").text(result);
 }
 
 
-function getRandomNumber (minValue, maxValue) {
-  return Math.round(minValue + (maxValue - minValue) * Math.random());
-}
-
-
-function getRandomEquition (x, y) {
-  var mulX = getRandomNumber(1, 10);
-  var mulY = getRandomNumber(1, 10);
-  var result = mulX * x + mulY * y;
-
-  return String.format("{0}x + {1}y = {2}", mulX, mulY, result);
-}
-
-
 function showResult() {
+  calculateResult();
   $("#result-1").show();
 }
-
-
-function hideResult() {
-  $("#result-1").hide();
-}
-
 
 String.format = function() {
     // The string containing the format items (e.g. "{0}")
