@@ -25,8 +25,11 @@ function calculateResult() {
   var value2 = $("#text2").val();
   
   var result1 = value1 / value2;
-  // parseFloat(value1 / value2).toFixed(3)
-  var result = String.format("{0} ({1})", result1, result1);
+  var result2 = result1.toFixed(3);
+  var result = String.format("{0} ({1})", result1, result2);
+  
+  console.log(result1, result2, result);
+  
   $("#result-1").text(result);
 }
 
