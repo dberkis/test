@@ -5,7 +5,11 @@ $(document).ready(function() {
       e.preventDefault();
   });
   
-  $("button#button-results-1").on("change keyup paste", function() {
+  $("input#text1").on("change keyup paste", function() {
+    calculateResult();
+  });
+
+  $("input#text2").on("change keyup paste", function() {
     calculateResult();
   });
   
