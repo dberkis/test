@@ -24,7 +24,7 @@ function calculateResult() {
   var value1 = $("#text1").val();
   var value2 = $("#text2").val();
 
-  var result = String.format("{0}", value1 / value2);
+  var result = String.format("{0} ({1})", value1 / value2, (value1 / value2).toFixed(3));
   $("#result-1").text(result);
 }
 
