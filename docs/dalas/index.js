@@ -5,7 +5,7 @@ $(document).ready(function() {
       e.preventDefault();
   });
   
-  $("button#button-results-1").change(function() {
+  $("button#button-results-1").on("change keyup paste", function() {
     calculateResult();
   });
   
