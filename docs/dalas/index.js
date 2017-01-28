@@ -5,12 +5,13 @@ $(document).ready(function() {
       e.preventDefault();
   });
   
-  $("button#button-results-1").click(function() {
-    showResult();
+  $("button#button-results-1").change(function() {
+    calculateResult();
   });
   
   $("#text1").val("1");
   $("#text2").val("3");
+  calculateResult();
 });
 
 
@@ -23,11 +24,6 @@ function calculateResult() {
   $("#result-1").text(result);
 }
 
-
-function showResult() {
-  calculateResult();
-  $("#result-1").show();
-}
 
 String.format = function() {
     // The string containing the format items (e.g. "{0}")
