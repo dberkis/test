@@ -4,7 +4,7 @@
 
 ### test subsubheader
 
-![clock](test/docs/images/clock.png)
+![clock](images/clock.png)
 
 First Header | Second Header
 ------------ | -------------
