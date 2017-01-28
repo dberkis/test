@@ -6,7 +6,7 @@
 
 [Matematika](matematika/ "Matematika")
 
-[Matematika](dalas/ "Dalas")
+[Dalas](dalas/ "Dalas")
 
 ![clock](images/clock.png)
 
